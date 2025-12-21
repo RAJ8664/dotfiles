@@ -1,0 +1,29 @@
+body,
+html,
+#main,
+.Root__main-view,
+.Root__main-container {
+	background: rgba(0, 0, 0, 0.4) !important;
+	backdrop-filter: blur(15px) !important;
+}
+
+.os-scrollbar,
+.os-scrollbar-horizontal,
+.os-scrollbar-vertical,
+.os-scrollbar-track-interactive {
+	display: none !important;
+}
+
+/* Kill Spotify's album-based header gradient */
+.main-entityHeader-backgroundColor,
+.main-entityHeader-backgroundGradient {
+	background-image: none !important;
+	background-color: var(--spice-main) !important;
+}
+
+/* Make the playlist header + area under it match the theme */
+.main-entityHeader-header,
+.main-entityHeader-container,
+.main-trackList-trackList {
+	background-color: var(--spice-main) !important;
+}

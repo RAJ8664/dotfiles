@@ -1,0 +1,30 @@
+{
+    "id": "network-indicator",
+    "name": "NetworkIndicator",
+    "version": "1.0.1",
+    "minNoctaliaVersion": "3.6.2",
+    "author": "tonigineer",
+    "license": "MIT",
+    "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+    "description": "A `lively` network traffic indicator.",
+    "entryPoints": {
+        "barWidget": "BarWidget.qml",
+        "settings": "Settings.qml"
+    },
+    "dependencies": {
+        "plugins": []
+    },
+    "metadata": {
+        "defaultSettings": {
+            "arrowType": "caret",
+            "byteThresholdActive": 1024,
+            "fontSizeModifier": 1.0,
+            "forceMegabytes": false,
+            "iconSizeModifier": 1.0,
+            "minWidth": 0,
+            "showNumbers": true,
+            "spacingInbetween": 0,
+            "useCustomColors": false
+        }
+    }
+}
