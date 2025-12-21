@@ -1,15 +1,11 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .....[Extra] Arrow Best to combine with [TOP] Arrow.... */
-/* --- 👍 taken from https://github.com/mxkrsv  👍 --- */
-
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-	min-height: 0;  
-    /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-    font-size: 97%;
-    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-    border: none;
+	font-family: 'JetBrainsMono Nerd Font';
+	font-weight: bold;
+	min-height: 0;
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	border: none;
 	border-radius: 0;
 	min-height: 0;
 	margin: 0;
@@ -37,7 +33,6 @@
 @define-color braqua	#8ec07c;
 @define-color white		#ebdbb2;
 @define-color bg2		#504945;
-
 
 @define-color warning 	@bryellow;
 @define-color critical	@red;
@@ -111,7 +106,7 @@
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,

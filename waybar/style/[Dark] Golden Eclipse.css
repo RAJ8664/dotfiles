@@ -1,21 +1,17 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Golden Eclipse */
-
 * {
-font-family: "JetBrainsMono Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 97%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-padding: 1px;
+	font-family: 'JetBrainsMono Nerd Font';
+	font-weight: bold;
+	min-height: 0;
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	padding: 1px;
 }
 
-
 window#waybar {
-  transition-property: background-color;
-  transition-duration: 0.5s;
-	background: #000000; 
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	background: #000000;
 	padding-top: 3px;
 	padding-bottom: 3px;
 	padding-right: 4px;
@@ -24,11 +20,11 @@ window#waybar {
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+	opacity: 0.2;
 }
 
 #waybar.empty #window {
-  background: none;
+	background: none;
 }
 
 #backlight,
@@ -46,7 +42,7 @@ window#waybar.hidden {
 #network,
 #power-profiles-daemon,
 #pulseaudio,
-#pulseaudio-slider,	
+#pulseaudio-slider,
 #taskbar,
 #temperature,
 #tray,
@@ -80,13 +76,13 @@ window#waybar.hidden {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay{
+#custom-weather.sunnyDay {
 	color: #fcba03;
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -95,20 +91,20 @@ window#waybar.hidden {
 }
 
 #temperature.critical {
-  background-color: red;
+	background-color: red;
 }
 
 #tray > .passive {
-  -gtk-icon-effect: dim;
+	-gtk-icon-effect: dim;
 }
 #tray > .needs-attention {
-  -gtk-icon-effect: highlight;
+	-gtk-icon-effect: highlight;
 }
 
 @keyframes blink {
-    to {
-        color: #000000;
-    }
+	to {
+		color: #000000;
+	}
 }
 
 /*-----Indicators----*/
@@ -120,7 +116,7 @@ window#waybar.hidden {
 #battery.critical:not(.charging) {
 	color: #f53c3c;
 	animation-name: blink;
-	animation-duration: 3.0s;
+	animation-duration: 3s;
 	animation-timing-function: steps(12);
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -128,15 +124,15 @@ window#waybar.hidden {
 
 #taskbar button,
 #workspaces button {
-    box-shadow: none;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
-    color: #fcba03;
+	padding: 0px;
+	border-radius: 9px;
+	padding-left: 4px;
+	padding-right: 4px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	color: #fcba03;
 }
 
 #taskbar button:hover,
@@ -144,10 +140,10 @@ window#waybar.hidden {
 	border-radius: 10px;
 	color: #a6adc8;
 	background-color: #ffeb8a;
- 	padding-left: 2px;
-    padding-right: 2px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	padding-left: 2px;
+	padding-right: 2px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button.persistent {
@@ -159,27 +155,26 @@ window#waybar.hidden {
 #workspaces button.active {
 	color: black;
 	background-color: #fcba03;
-  	border-radius: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	border-radius: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button.urgent {
 	color: red;
- 	border-radius: 0px;
+	border-radius: 0px;
 }
 
-
 #pulseaudio.muted {
-  color: red;
+	color: red;
 }
 
 #network.disconnected,
 #network.disabled {
-  background-color: #fcba03;
-  color: #cdd6f4;
+	background-color: #fcba03;
+	color: #cdd6f4;
 }
 
 #backlight-slider slider,
@@ -204,4 +199,3 @@ window#waybar.hidden {
 	min-height: 10px;
 	border-radius: 5px;
 }
-

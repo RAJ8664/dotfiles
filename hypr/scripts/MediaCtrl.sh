@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Playerctl
 
 music_icon="$HOME/.config/swaync/icons/music.png"
@@ -18,6 +18,7 @@ play_previous() {
 # Toggle play/pause
 toggle_play_pause() {
     playerctl play-pause
+    sleep 0.1
     show_music_notification
 }
 

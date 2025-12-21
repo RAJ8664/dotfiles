@@ -1,7 +1,3 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .....[TOP] Arrow Best to combine with [Extra] Arrow Style ......... */
-/* --- 👍 taken from https://github.com/mxkrsv  👍 --- */
-
 {
 "include": [
   "$HOME/.config/waybar/Modules",

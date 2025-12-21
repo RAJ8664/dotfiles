@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Made and brought to by Kiran George
-# /* -- ✨ https://github.com/SherLock707 ✨ -- */  ##
 # Dropdown Terminal
 # Usage: ./Dropdown.sh [-d] <terminal_command>
 # Example: ./Dropdown.sh foot
@@ -14,9 +13,9 @@ SPECIAL_WS="special:scratchpad"
 ADDR_FILE="/tmp/dropdown_terminal_addr"
 
 # Dropdown size and position configuration (percentages)
-WIDTH_PERCENT=50  # Width as percentage of screen width
-HEIGHT_PERCENT=50 # Height as percentage of screen height
-Y_PERCENT=5       # Y position as percentage from top (X is auto-centered)
+WIDTH_PERCENT=65  # Width as percentage of screen width
+HEIGHT_PERCENT=65 # Height as percentage of screen height
+Y_PERCENT=10      # Y position as percentage from top (X is auto-centered)
 
 # Animation settings
 ANIMATION_DURATION=100 # milliseconds

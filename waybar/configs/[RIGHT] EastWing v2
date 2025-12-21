@@ -1,7 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
-// ### RIGHTPANEL v2 ### //
-
 {
 "include": [
   "$HOME/.config/waybar/Modules",

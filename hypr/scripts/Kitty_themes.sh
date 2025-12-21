@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Kitty Themes Source https://github.com/dexpota/kitty-themes #
 
 # Define directories and variables

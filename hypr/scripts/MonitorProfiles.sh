@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # For applying Pre-configured Monitor Profiles
 
 # Check if rofi is already running

@@ -1,0 +1,6 @@
+$scriptsDir/Polkit-NixOS.sh
+$scriptsDir/PortalHyprland.sh
+$SwwwRandom $wallDIR # random wallpaper switcher every 30 minutes
+mpvpaper '*' -o "load-scripts=no no-audio --loop" $livewallpaper
+quickshell
+swww-daemon --format xrgb && swww img $HOME/Pictures/wallpapers/mecha-nostalgia.png  # persistent wallpaper

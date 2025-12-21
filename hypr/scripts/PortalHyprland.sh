@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # For manually starting xdg-desktop-portal-hyprland
 
 sleep 1

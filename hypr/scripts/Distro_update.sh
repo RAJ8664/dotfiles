@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Simple bash script to check and will try to update your system
 
 # Local Paths

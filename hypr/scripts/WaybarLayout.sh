@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script for waybar layout or configs
 
 IFS=$'\n\t'
@@ -53,7 +53,7 @@ main() {
     }
 
     # Strip marker before applying
-    choice=${choice# $MARKER}
+    choice=${choice#"$MARKER "}
 
     case "$choice" in
     "no panel")

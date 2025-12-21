@@ -1,7 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
-// ### DUAL TOP and BOTTOM ### //
-
 [{
 "include": [
   "$HOME/.config/waybar/Modules",

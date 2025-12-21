@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script for waybar styles
 
 IFS=$'\n\t'
@@ -54,7 +54,7 @@ main() {
     }
 
     # remove annotation and apply
-    choice=${choice# $MARKER}
+    choice=${choice#"$MARKER "}
     apply_style "$choice"
 }
 

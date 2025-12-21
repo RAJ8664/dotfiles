@@ -1,5 +1,4 @@
-#!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+#!/usr/bin/env bash
 # Wallpaper Effects using ImageMagick (SUPER SHIFT W)
 
 # Variables
@@ -46,12 +45,12 @@ declare -A effects=(
 # Function to apply no effects
 no-effects() {
     swww img -o "$focused_monitor" "$wallpaper_current" $SWWW_PARAMS &&
-    wait $!
+        wait $!
     wallust run "$wallpaper_current" -s &&
-    wait $!
+        wait $!
     # Refresh rofi, waybar, wallust palettes
-	sleep 2
-	"$SCRIPTSDIR/Refresh.sh"
+    sleep 2
+    "$SCRIPTSDIR/Refresh.sh"
 
     notify-send -u low -i "$iDIR/ja.png" "No wallpaper" "effects applied"
     # copying wallpaper for rofi menu
@@ -74,19 +73,19 @@ main() {
             no-effects
         elif [[ "${effects[$choice]+exists}" ]]; then
             # Apply selected effect
-            notify-send -u normal -i "$iDIR/ja.png"  "Applying:" "$choice effects"
+            notify-send -u normal -i "$iDIR/ja.png" "Applying:" "$choice effects"
             eval "${effects[$choice]}"
-            
+
             # intial kill process
             for pid in swaybg mpvpaper; do
-            killall -SIGUSR1 "$pid"
+                killall -SIGUSR1 "$pid"
             done
 
             sleep 1
             swww img -o "$focused_monitor" "$wallpaper_output" $SWWW_PARAMS &
 
             sleep 2
-  
+
             wallust run "$wallpaper_output" -s &
             sleep 1
             # Refresh rofi, waybar, wallust palettes
@@ -99,7 +98,7 @@ main() {
 }
 
 # Check if rofi is already running and kill it
-if pidof rofi > /dev/null; then
+if pidof rofi >/dev/null; then
     pkill rofi
 fi
 
@@ -108,31 +107,41 @@ main
 sleep 1
 
 if [[ -n "$choice" ]]; then
-  sddm_simple="/usr/share/sddm/themes/simple_sddm_2"
-  if [ -d "$sddm_simple" ]; then
-  
-	# Check if yad is running to avoid multiple yad notification
-	if pidof yad > /dev/null; then
-	  killall yad
-	fi
-	
-	if yad --info --text="Set current wallpaper as SDDM background?\n\nNOTE: This only applies to SIMPLE SDDM v2 Theme" \
-    --text-align=left \
-    --title="SDDM Background" \
-    --timeout=5 \
-    --timeout-indicator=right \
-    --button="yad-yes:0" \
-    --button="yad-no:1" \
-    ; then
-
-    # Check if terminal exists
-    if ! command -v "$terminal" &>/dev/null; then
-    notify-send -i "$iDIR/ja.png" "Missing $terminal" "Install $terminal to enable setting of wallpaper background"
-    exit 1
+    # Resolve SDDM themes directory (standard and NixOS path)
+    sddm_themes_dir=""
+    if [ -d "/usr/share/sddm/themes" ]; then
+        sddm_themes_dir="/usr/share/sddm/themes"
+    elif [ -d "/run/current-system/sw/share/sddm/themes" ]; then
+        sddm_themes_dir="/run/current-system/sw/share/sddm/themes"
     fi
 
-	exec $SCRIPTSDIR/sddm_wallpaper.sh --effects
-    
+    if [ -n "$sddm_themes_dir" ]; then
+        sddm_simple="$sddm_themes_dir/simple_sddm_2"
+
+        # Only prompt if theme exists and its Backgrounds directory is writable
+        if [ -d "$sddm_simple" ] && [ -w "$sddm_simple/Backgrounds" ]; then
+            # Check if yad is running to avoid multiple yad notification
+            if pidof yad >/dev/null; then
+                killall yad
+            fi
+
+            if yad --info --text="Set current wallpaper as SDDM background?\n\nNOTE: This only applies to SIMPLE SDDM v2 Theme" \
+                --text-align=left \
+                --title="SDDM Background" \
+                --timeout=5 \
+                --timeout-indicator=right \
+                --button="yad-yes:0" \
+                --button="yad-no:1" \
+                ; then
+
+                # Check if terminal exists
+                if ! command -v "$terminal" &>/dev/null; then
+                    notify-send -i "$iDIR/ja.png" "Missing $terminal" "Install $terminal to enable setting of wallpaper background"
+                    exit 1
+                fi
+
+                exec "$SCRIPTSDIR/sddm_wallpaper.sh" --effects
+            fi
+        fi
     fi
-  fi
 fi

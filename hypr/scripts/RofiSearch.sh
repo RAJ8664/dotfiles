@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # For Searching via web browsers
 
 # Define the path to the config file

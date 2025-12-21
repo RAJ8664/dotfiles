@@ -1,8 +1,5 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/*  Black & White MonoChrome */
-
 * {
-	font-family: "JetBrainsMono Nerd Font";
+	font-family: 'JetBrainsMono Nerd Font';
 	font-weight: bold;
 	min-height: 0;
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
@@ -13,9 +10,9 @@
 window#waybar,
 window#waybar.empty,
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+	background-color: transparent;
+	padding: 0px;
+	border: 0px;
 }
 
 tooltip {
@@ -28,7 +25,7 @@ tooltip {
 	border-color: white;
 }
 
-tooltip label{
+tooltip label {
 	color: #cdd6f4;
 }
 /*-----module groups----*/
@@ -72,32 +69,32 @@ tooltip label{
 #taskbar button,
 #workspaces button {
 	color: dimgrey;
-    box-shadow: none;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	padding: 0px;
+	border-radius: 9px;
+	padding-left: 4px;
+	padding-right: 4px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 #taskbar button:hover,
 #workspaces button:hover {
 	color: white;
 	background-color: #7f849c;
-    padding-left: 2px;
-    padding-right: 2px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	padding-left: 2px;
+	padding-right: 2px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active,
 #workspaces button.active {
 	color: white;
-    padding-left: 8px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	padding-left: 8px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button.persistent {
@@ -154,7 +151,7 @@ tooltip label{
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
@@ -169,7 +166,7 @@ tooltip label{
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
-	color: #39FF14;
+	color: #39ff14;
 }
 
 #pulseaudio.muted {
@@ -188,7 +185,7 @@ tooltip label{
 #battery.critical:not(.charging) {
 	color: #f53c3c;
 	animation-name: blink;
-	animation-duration: 3.0s;
+	animation-duration: 3s;
 	animation-timing-function: steps(12);
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -216,3 +213,4 @@ tooltip label{
 	min-height: 10px;
 	border-radius: 5px;
 }
+

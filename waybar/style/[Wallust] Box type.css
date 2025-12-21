@@ -1,17 +1,13 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Wallust - Box type */
-
 @import '../../.config/waybar/wallust/colors-waybar.css';
 
 * {
-font-family: "JetBrainsMono Nerd Font";
-font-weight: bold;
-min-height: 0;
-/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-font-size: 97%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	font-family: 'JetBrainsMono Nerd Font';
+	font-weight: bold;
+	min-height: 0;
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
-
 
 window#waybar {
 	background: transparent;
@@ -21,12 +17,11 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-
 window#waybar.empty,
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+	background-color: transparent;
+	padding: 0px;
+	border: 0px;
 }
 
 #window {
@@ -34,50 +29,50 @@ window#waybar.empty #window {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-    color: transparent;
+	color: transparent;
 	background: transparent;
 }
 
 #taskbar button,
 #workspaces button {
-    color: @foreground;
-    box-shadow: none;
+	color: @foreground;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	padding: 0px;
+	border-radius: 9px;
+	padding-left: 4px;
+	padding-right: 4px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active,
 #workspaces button.active {
-    color: @color12;
-    background-color: @foreground;
-    padding-left: 4px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @color12;
+	background-color: @foreground;
+	padding-left: 4px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.focused,
 #workspaces button.focused {
-    color: @color4;
+	color: @color4;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    border-radius: 10px;
+	color: #11111b;
+	border-radius: 10px;
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
-    color: @color4;
-    padding-left: 2px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @color4;
+	padding-left: 2px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #backlight,
@@ -95,7 +90,7 @@ window#waybar.empty #window {
 #network,
 #power-profiles-daemon,
 #pulseaudio,
-#pulseaudio-slider,	
+#pulseaudio-slider,
 #taskbar,
 #temperature,
 #tray,
@@ -130,13 +125,13 @@ window#waybar.empty #window {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay{
+#custom-weather.sunnyDay {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-left: 8px;
@@ -145,9 +140,9 @@ window#waybar.empty #window {
 	transition: none;
 	color: @foreground;
 	background: @color0;
-    border-bottom-width: 5px;
-    border-bottom-color: @color12;
-    border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: @color12;
+	border-bottom-style: solid;
 }
 
 #custom-power {
@@ -157,7 +152,7 @@ window#waybar.empty #window {
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
-	color: #39FF14;
+	color: #39ff14;
 }
 
 #network {
@@ -165,7 +160,7 @@ window#waybar.empty #window {
 }
 
 #temperature.critical {
-    background-color: red;
+	background-color: red;
 	color: black;
 }
 
@@ -177,23 +172,23 @@ window#waybar.empty #window {
 	padding-right: 2px;
 }
 #battery.critical:not(.charging) {
-    background-color: #ffffff;
-    color: #000000;
+	background-color: #ffffff;
+	color: #000000;
 	animation-name: blink;
-	animation-duration: 3.0s;
+	animation-duration: 3s;
 	animation-timing-function: steps(12);
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-    border-bottom-width: 5px;
-    border-bottom-color: @color12;
-    border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: @color12;
+	border-bottom-style: solid;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
 }
 
 #backlight-slider slider,
